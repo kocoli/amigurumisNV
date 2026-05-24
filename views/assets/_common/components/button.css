@@ -1,0 +1,96 @@
+/* RESET */
+
+button,
+.btn,
+a.btn{
+    font:inherit;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+/* BASE */
+
+button,
+.btn,
+a.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+
+    padding:.8rem 1.2rem;
+
+    border-radius:10px;
+
+    font-weight:600;
+    line-height:1;
+
+    transition:.2s ease;
+}
+
+/* PRIMARY */
+
+button.primary,
+.btn.primary{
+    background:var(--primary);
+    color:white;
+}
+
+button.primary:hover,
+.btn.primary:hover{
+    filter:brightness(1.08);
+}
+
+button.primary:active,
+.btn.primary:active{
+    transform:scale(.98);
+}
+
+/* SECONDARY */
+
+button.secondary,
+.btn.secondary{
+    background:var(--surface);
+    color:var(--text);
+
+    border:1px solid var(--border);
+}
+
+button.secondary:hover,
+.btn.secondary:hover{
+    background:var(--backg);
+}
+
+/* OUTLINE (extra útil) */
+
+button.outline,
+.btn.outline{
+    background:transparent;
+
+    color:var(--primary);
+
+    border:1px solid var(--primary);
+}
+
+button.outline:hover,
+.btn.outline:hover{
+    background:color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+/* DISABLED */
+
+button:disabled,
+.btn.disabled{
+    opacity:.6;
+    cursor:not-allowed;
+    pointer-events:none;
+}
+
+/* FULL WIDTH opcional */
+
+.btn.block,
+button.block{
+    width:100%;
+}
